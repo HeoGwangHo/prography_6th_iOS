@@ -9,21 +9,27 @@
 /* Begin PBXBuildFile section */
 		AD528145240CFB4D0020F5F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD528144240CFB4D0020F5F1 /* AppDelegate.swift */; };
 		AD528147240CFB4D0020F5F1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD528146240CFB4D0020F5F1 /* SceneDelegate.swift */; };
-		AD52814C240CFB4D0020F5F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD52814A240CFB4D0020F5F1 /* Main.storyboard */; };
 		AD52814E240CFB4F0020F5F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD52814D240CFB4F0020F5F1 /* Assets.xcassets */; };
 		AD528151240CFB4F0020F5F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD52814F240CFB4F0020F5F1 /* LaunchScreen.storyboard */; };
-		AD528159240CFD960020F5F1 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD528158240CFD960020F5F1 /* TableViewController.swift */; };
+		AD528163240E2D630020F5F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD528162240E2D630020F5F1 /* Main.storyboard */; };
+		AD528165240E2DCD0020F5F1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD528164240E2DCD0020F5F1 /* ViewController.swift */; };
+		AD528167240E2FAC0020F5F1 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD528166240E2FAC0020F5F1 /* TableViewController.swift */; };
+		AD528169240E30420020F5F1 /* TableViewCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD528168240E30420020F5F1 /* TableViewCellController.swift */; };
+		AD52816B240E351F0020F5F1 /* ResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD52816A240E351F0020F5F1 /* ResponseModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AD528141240CFB4D0020F5F1 /* prography_6th_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = prography_6th_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD528144240CFB4D0020F5F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD528146240CFB4D0020F5F1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AD52814B240CFB4D0020F5F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AD52814D240CFB4F0020F5F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD528150240CFB4F0020F5F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AD528152240CFB4F0020F5F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AD528158240CFD960020F5F1 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		AD528162240E2D630020F5F1 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		AD528164240E2DCD0020F5F1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AD528166240E2FAC0020F5F1 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		AD528168240E30420020F5F1 /* TableViewCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellController.swift; sourceTree = "<group>"; };
+		AD52816A240E351F0020F5F1 /* ResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +64,11 @@
 			children = (
 				AD528144240CFB4D0020F5F1 /* AppDelegate.swift */,
 				AD528146240CFB4D0020F5F1 /* SceneDelegate.swift */,
-				AD528158240CFD960020F5F1 /* TableViewController.swift */,
-				AD52814A240CFB4D0020F5F1 /* Main.storyboard */,
+				AD528162240E2D630020F5F1 /* Main.storyboard */,
+				AD528168240E30420020F5F1 /* TableViewCellController.swift */,
+				AD528166240E2FAC0020F5F1 /* TableViewController.swift */,
+				AD528164240E2DCD0020F5F1 /* ViewController.swift */,
+				AD52816A240E351F0020F5F1 /* ResponseModel.swift */,
 				AD52814D240CFB4F0020F5F1 /* Assets.xcassets */,
 				AD52814F240CFB4F0020F5F1 /* LaunchScreen.storyboard */,
 				AD528152240CFB4F0020F5F1 /* Info.plist */,
@@ -125,9 +134,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD528163240E2D630020F5F1 /* Main.storyboard in Resources */,
 				AD528151240CFB4F0020F5F1 /* LaunchScreen.storyboard in Resources */,
 				AD52814E240CFB4F0020F5F1 /* Assets.xcassets in Resources */,
-				AD52814C240CFB4D0020F5F1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +147,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD528165240E2DCD0020F5F1 /* ViewController.swift in Sources */,
 				AD528145240CFB4D0020F5F1 /* AppDelegate.swift in Sources */,
-				AD528159240CFD960020F5F1 /* TableViewController.swift in Sources */,
 				AD528147240CFB4D0020F5F1 /* SceneDelegate.swift in Sources */,
+				AD528167240E2FAC0020F5F1 /* TableViewController.swift in Sources */,
+				AD52816B240E351F0020F5F1 /* ResponseModel.swift in Sources */,
+				AD528169240E30420020F5F1 /* TableViewCellController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		AD52814A240CFB4D0020F5F1 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AD52814B240CFB4D0020F5F1 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		AD52814F240CFB4F0020F5F1 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
