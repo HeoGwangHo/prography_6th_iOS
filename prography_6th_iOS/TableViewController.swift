@@ -10,8 +10,16 @@ import UIKit
 
 class TableViewController: UITableViewController {
 
+    var keyWord: String = ""
+    var bookArray: [Movie] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tableView.dataSource = self
+        self.tableView.delegate = self
+        
+        let list = Movie(title: keyWord, rating: 33)
+        bookArray.append(list)
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -24,23 +32,24 @@ class TableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return bookArray.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "BookList", for: indexPath) as! TableViewCellController
 
-        // Configure the cell...
+        cell.title.text = bookArray[0].title
+        cell.rating.text = bookArray[0].rating.debugDescription
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.

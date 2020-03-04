@@ -9,8 +9,18 @@
 import UIKit
 
 class viewController: UIViewController {
+    @IBOutlet var tfkeyWord: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let tableViewController = segue.destination as! TableViewController
+        if segue.identifier == "btnNext" {
+            tableViewController.keyWord = tfkeyWord.text!
+        }
+    }
+    
 }
