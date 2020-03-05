@@ -12,4 +12,8 @@ class TableViewCellController: UITableViewCell {
     @IBOutlet var title: UILabel!
     @IBOutlet var rating: UILabel!
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+    }
 }

@@ -11,37 +11,43 @@ import UIKit
 class TableViewController: UITableViewController {
     
     var keyWord: String = ""
-    var dataStructure: MovieResponse?
-    var bookArray: [Movie] = []
+//    var dataStructure: MovieResponse?
+//    var movieAtrray: [Movie] = []
+    var dataStructure: BookResponse?
+    var bookArray: [Book] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.dataSource = self
         self.tableView.delegate = self
         
-        guard let BaseURL = URL(string: "https://yts.mx/api/v2/list_movies.json") else {
-            bookArray.append(Movie(title: "ERROR_1", rating: 1.1))
+        guard let BaseURL = URL(string:/*"https://yts.mx/api/v2/list_movies.json"*/"https://api.itbook.store/1.0/search/mongodb") else {
+//            movieAtrray.append(Movie(title: "ERROR_1", rating: 1.1))
+            bookArray.append(Book(title: "ERROR_1", price: "1.1"))
             return
         }
         
         URLSession.shared.dataTask(with: BaseURL){ data, responds, error in
             guard error == nil else {
-                self.bookArray.append(Movie(title: "ERROR_2", rating: 2.2))
+//                self.movieAtrray.append(Movie(title: "ERROR_2", rating: 2.2))
+                self.bookArray.append(Book(title: "ERROR_2", price: "2.2"))
                 return
             }
             guard let resData = data else { return }
             do {
-                self.dataStructure = try JSONDecoder().decode(MovieResponse.self, from: resData)
+                self.dataStructure = try JSONDecoder().decode(/*MovieResponse*/BookResponse.self, from: resData)
             } catch {
-                self.bookArray.append(Movie(title: "ERROR_3", rating: 3.3))
+//                self.movieAtrray.append(Movie(title: "ERROR_3", rating: 3.3))
+                self.bookArray.append(Book(title: "ERROR_3", price: "3.3"))
             }
             DispatchQueue.main.async(execute: {
-                if let list = self.dataStructure?.data?.movies{
+                if let list = self.dataStructure?.books/*data?.movies*/{
                     for movie in list {
-                        print(movie)
-                        if(movie.rating! > (self.keyWord as NSString).doubleValue){
-                            self.bookArray.append(movie)
-                        }
+//                        self.movieAtrray.append(movie)
+                        self.bookArray.append(movie)
+//                        if(movie.rating! > (self.keyWord as NSString).doubleValue){
+//                            self.movieAtrray.append(movie)
+//                        }
                     }
                 }
                 self.tableView.reloadData()
@@ -58,15 +64,15 @@ class TableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return bookArray.count
+        return bookArray.count//movieAtrray.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "BookList", for: indexPath) as! TableViewCellController
 
-        cell.textLabel?.text = bookArray[indexPath.row].title
-        cell.detailTextLabel?.text = bookArray[indexPath.row].rating?.debugDescription
+        cell.textLabel?.text = bookArray[indexPath.row].title//movieAtrray[indexPath.row].title
+        cell.detailTextLabel?.text = bookArray[indexPath.row].price//movieAtrray[indexPath.row].rating?.description
 
         return cell
     }
@@ -107,14 +113,16 @@ class TableViewController: UITableViewController {
     }
     */
 
-    /*
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        let detailViewController = segue.destination as! DetailViewController
+        let sender: UITableViewCell = sender as! TableViewCellController
+        
+        if segue.identifier == "cellDetail" {
+            detailViewController.detailTitle = sender.textLabel!.text!
+            detailViewController.detailRating = sender.detailTextLabel!.text!
+        }
+        
     }
-    */
 
 }

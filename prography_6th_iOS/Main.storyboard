@@ -95,7 +95,7 @@
                                 <connections>
                                     <outlet property="rating" destination="p8m-xb-N98" id="wO3-DO-al8"/>
                                     <outlet property="title" destination="5wQ-2S-jij" id="G7C-Yn-15p"/>
-                                    <segue destination="n2w-TV-y0Q" kind="show" id="7xf-Hn-fqa"/>
+                                    <segue destination="n2w-TV-y0Q" kind="show" identifier="cellDetail" id="7xf-Hn-fqa"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

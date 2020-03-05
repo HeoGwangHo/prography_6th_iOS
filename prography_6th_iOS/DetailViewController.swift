@@ -17,5 +17,8 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        lblTitle.text = detailTitle
+        lblRating.text = detailRating
     }
 }
