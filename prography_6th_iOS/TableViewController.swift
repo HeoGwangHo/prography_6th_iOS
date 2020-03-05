@@ -9,6 +9,7 @@
 import UIKit
 
 class TableViewController: UITableViewController {
+    @IBOutlet var loding: UIActivityIndicatorView!
     
     var keyWord: String = ""
 //    var dataStructure: MovieResponse?
@@ -20,6 +21,7 @@ class TableViewController: UITableViewController {
         super.viewDidLoad()
         self.tableView.dataSource = self
         self.tableView.delegate = self
+        
         
         guard let BaseURL = URL(string:/*"https://yts.mx/api/v2/list_movies.json"*/"https://api.itbook.store/1.0/search/mongodb") else {
 //            movieAtrray.append(Movie(title: "ERROR_1", rating: 1.1))
@@ -50,7 +52,9 @@ class TableViewController: UITableViewController {
 //                        }
                     }
                 }
+                self.loding.startAnimating()
                 self.tableView.reloadData()
+                self.loding.stopAnimating()
             })
         }.resume()
     }
