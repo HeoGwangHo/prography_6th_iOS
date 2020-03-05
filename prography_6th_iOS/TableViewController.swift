@@ -46,7 +46,7 @@ class TableViewController: UITableViewController {
                     for movie in list {
 //                        self.movieAtrray.append(movie)
                         self.bookArray.append(movie)
-//                        if(movie.rating! > (self.keyWord as NSString).doubleValue){
+//                        if(movie.rating! >= (self.keyWord as NSString).doubleValue){
 //                            self.movieAtrray.append(movie)
 //                        }
                     }
