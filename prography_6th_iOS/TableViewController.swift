@@ -9,8 +9,9 @@
 import UIKit
 
 class TableViewController: UITableViewController {
-
+    
     var keyWord: String = ""
+    var dataStructure: MovieResponse?
     var bookArray: [Movie] = []
     
     override func viewDidLoad() {
@@ -18,14 +19,34 @@ class TableViewController: UITableViewController {
         self.tableView.dataSource = self
         self.tableView.delegate = self
         
-        let list = Movie(title: keyWord, rating: 33)
-        bookArray.append(list)
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        guard let BaseURL = URL(string: "https://yts.mx/api/v2/list_movies.json") else {
+            bookArray.append(Movie(title: "ERROR_1", rating: 1.1))
+            return
+        }
+        
+        URLSession.shared.dataTask(with: BaseURL){ data, responds, error in
+            guard error == nil else {
+                self.bookArray.append(Movie(title: "ERROR_2", rating: 2.2))
+                return
+            }
+            guard let resData = data else { return }
+            do {
+                self.dataStructure = try JSONDecoder().decode(MovieResponse.self, from: resData)
+            } catch {
+                self.bookArray.append(Movie(title: "ERROR_3", rating: 3.3))
+            }
+            DispatchQueue.main.async(execute: {
+                if let list = self.dataStructure?.data?.movies{
+                    for movie in list {
+                        print(movie)
+                        if(movie.rating! > (self.keyWord as NSString).doubleValue){
+                            self.bookArray.append(movie)
+                        }
+                    }
+                }
+                self.tableView.reloadData()
+            })
+        }.resume()
     }
 
     // MARK: - Table view data source
@@ -44,8 +65,8 @@ class TableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "BookList", for: indexPath) as! TableViewCellController
 
-        cell.title.text = bookArray[0].title
-        cell.rating.text = bookArray[0].rating.debugDescription
+        cell.textLabel?.text = bookArray[indexPath.row].title
+        cell.detailTextLabel?.text = bookArray[indexPath.row].rating?.debugDescription
 
         return cell
     }

@@ -15,16 +15,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="검색어를 입력하세요." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nbg-67-hoX">
-                                <rect key="frame" x="16" y="108" width="141.5" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="최소 평점을 입력하세요 (0~9)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nbg-67-hoX">
+                                <rect key="frame" x="16" y="108" width="204" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="apple" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b5A-hJ-Vt9">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="(0~9)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b5A-hJ-Vt9">
                                 <rect key="frame" x="16" y="149" width="382" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bg3-Ha-K3l">
                                 <rect key="frame" x="16" y="803" width="382" height="39"/>
@@ -93,7 +93,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="rating" destination="p8m-xb-N98" id="Wpm-rI-yan"/>
+                                    <outlet property="rating" destination="p8m-xb-N98" id="wO3-DO-al8"/>
                                     <outlet property="title" destination="5wQ-2S-jij" id="G7C-Yn-15p"/>
                                     <segue destination="n2w-TV-y0Q" kind="show" id="7xf-Hn-fqa"/>
                                 </connections>
@@ -110,21 +110,53 @@
             </objects>
             <point key="canvasLocation" x="1765" y="80"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="zFW-4X-qDX">
             <objects>
-                <viewController id="n2w-TV-y0Q" sceneMemberID="viewController">
+                <viewController id="n2w-TV-y0Q" customClass="DetailViewController" customModule="prography_6th_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eba-RO-Y8d">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ghe-su-Nsr">
+                                <rect key="frame" x="20" y="108" width="56" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="평점" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DGd-6g-8P4">
+                                <rect key="frame" x="20" y="164" width="35" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="35$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lst-y8-OFL">
+                                <rect key="frame" x="357" y="164" width="37" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="lst-y8-OFL" firstAttribute="top" secondItem="DGd-6g-8P4" secondAttribute="top" id="5Oe-dL-45A"/>
+                            <constraint firstItem="DGd-6g-8P4" firstAttribute="top" secondItem="ghe-su-Nsr" secondAttribute="bottom" constant="20" id="Myv-A6-Ios"/>
+                            <constraint firstItem="ghe-su-Nsr" firstAttribute="leading" secondItem="dlD-qD-z4H" secondAttribute="leading" constant="20" id="OtO-6v-wPV"/>
+                            <constraint firstItem="ghe-su-Nsr" firstAttribute="top" secondItem="dlD-qD-z4H" secondAttribute="top" constant="20" id="Zbf-ng-lBc"/>
+                            <constraint firstItem="dlD-qD-z4H" firstAttribute="trailing" secondItem="lst-y8-OFL" secondAttribute="trailing" constant="20" id="avw-6K-RE2"/>
+                            <constraint firstItem="DGd-6g-8P4" firstAttribute="leading" secondItem="dlD-qD-z4H" secondAttribute="leading" constant="20" id="zhG-bp-6bh"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="dlD-qD-z4H"/>
                     </view>
                     <navigationItem key="navigationItem" id="A8j-vP-nQZ"/>
+                    <connections>
+                        <outlet property="lblRating" destination="lst-y8-OFL" id="aGg-2D-cqa"/>
+                        <outlet property="lblTitle" destination="ghe-su-Nsr" id="8ot-Ex-WQZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PEe-7p-ni5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2574" y="80"/>
+            <point key="canvasLocation" x="2573.913043478261" y="79.6875"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="OGR-sP-Zsz">

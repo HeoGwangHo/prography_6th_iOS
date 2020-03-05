@@ -16,6 +16,7 @@
 		AD528167240E2FAC0020F5F1 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD528166240E2FAC0020F5F1 /* TableViewController.swift */; };
 		AD528169240E30420020F5F1 /* TableViewCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD528168240E30420020F5F1 /* TableViewCellController.swift */; };
 		AD52816B240E351F0020F5F1 /* ResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD52816A240E351F0020F5F1 /* ResponseModel.swift */; };
+		AD52816D240F9F610020F5F1 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD52816C240F9F610020F5F1 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		AD528166240E2FAC0020F5F1 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		AD528168240E30420020F5F1 /* TableViewCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellController.swift; sourceTree = "<group>"; };
 		AD52816A240E351F0020F5F1 /* ResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseModel.swift; sourceTree = "<group>"; };
+		AD52816C240F9F610020F5F1 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				AD528144240CFB4D0020F5F1 /* AppDelegate.swift */,
 				AD528146240CFB4D0020F5F1 /* SceneDelegate.swift */,
 				AD528162240E2D630020F5F1 /* Main.storyboard */,
+				AD52816C240F9F610020F5F1 /* DetailViewController.swift */,
 				AD528168240E30420020F5F1 /* TableViewCellController.swift */,
 				AD528166240E2FAC0020F5F1 /* TableViewController.swift */,
 				AD528164240E2DCD0020F5F1 /* ViewController.swift */,
@@ -153,6 +156,7 @@
 				AD528167240E2FAC0020F5F1 /* TableViewController.swift in Sources */,
 				AD52816B240E351F0020F5F1 /* ResponseModel.swift in Sources */,
 				AD528169240E30420020F5F1 /* TableViewCellController.swift in Sources */,
+				AD52816D240F9F610020F5F1 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
