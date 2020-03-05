@@ -14,9 +14,9 @@
 		AD528163240E2D630020F5F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD528162240E2D630020F5F1 /* Main.storyboard */; };
 		AD528165240E2DCD0020F5F1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD528164240E2DCD0020F5F1 /* ViewController.swift */; };
 		AD528167240E2FAC0020F5F1 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD528166240E2FAC0020F5F1 /* TableViewController.swift */; };
-		AD528169240E30420020F5F1 /* TableViewCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD528168240E30420020F5F1 /* TableViewCellController.swift */; };
 		AD52816B240E351F0020F5F1 /* ResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD52816A240E351F0020F5F1 /* ResponseModel.swift */; };
 		AD52816D240F9F610020F5F1 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD52816C240F9F610020F5F1 /* DetailViewController.swift */; };
+		AD537E4A2410DBDB009042A8 /* TableViewCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD537E492410DBDB009042A8 /* TableViewCellController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,9 +29,9 @@
 		AD528162240E2D630020F5F1 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		AD528164240E2DCD0020F5F1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AD528166240E2FAC0020F5F1 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
-		AD528168240E30420020F5F1 /* TableViewCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellController.swift; sourceTree = "<group>"; };
 		AD52816A240E351F0020F5F1 /* ResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseModel.swift; sourceTree = "<group>"; };
 		AD52816C240F9F610020F5F1 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		AD537E492410DBDB009042A8 /* TableViewCellController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +68,7 @@
 				AD528146240CFB4D0020F5F1 /* SceneDelegate.swift */,
 				AD528162240E2D630020F5F1 /* Main.storyboard */,
 				AD52816C240F9F610020F5F1 /* DetailViewController.swift */,
-				AD528168240E30420020F5F1 /* TableViewCellController.swift */,
+				AD537E492410DBDB009042A8 /* TableViewCellController.swift */,
 				AD528166240E2FAC0020F5F1 /* TableViewController.swift */,
 				AD528164240E2DCD0020F5F1 /* ViewController.swift */,
 				AD52816A240E351F0020F5F1 /* ResponseModel.swift */,
@@ -155,8 +155,8 @@
 				AD528147240CFB4D0020F5F1 /* SceneDelegate.swift in Sources */,
 				AD528167240E2FAC0020F5F1 /* TableViewController.swift in Sources */,
 				AD52816B240E351F0020F5F1 /* ResponseModel.swift in Sources */,
-				AD528169240E30420020F5F1 /* TableViewCellController.swift in Sources */,
 				AD52816D240F9F610020F5F1 /* DetailViewController.swift in Sources */,
+				AD537E4A2410DBDB009042A8 /* TableViewCellController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -15,10 +15,14 @@ class DetailViewController: UIViewController {
     var detailTitle: String = ""
     var detailRating: String = ""
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        lblTitle.text = detailTitle
+        lblRating.text = detailRating
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        lblTitle.text = detailTitle
-        lblRating.text = detailRating
     }
 }

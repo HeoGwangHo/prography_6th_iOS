@@ -69,7 +69,7 @@ class TableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "BookList", for: indexPath) as! TableViewCellController
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
 
         cell.textLabel?.text = bookArray[indexPath.row].title//movieAtrray[indexPath.row].title
         cell.detailTextLabel?.text = bookArray[indexPath.row].price//movieAtrray[indexPath.row].rating?.description
@@ -116,7 +116,7 @@ class TableViewController: UITableViewController {
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let detailViewController = segue.destination as! DetailViewController
-        let sender: UITableViewCell = sender as! TableViewCellController
+        let sender: UITableViewCell = sender as! UITableViewCell
         
         if segue.identifier == "cellDetail" {
             detailViewController.detailTitle = sender.textLabel!.text!
