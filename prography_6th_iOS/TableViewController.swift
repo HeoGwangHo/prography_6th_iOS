@@ -22,7 +22,6 @@ class TableViewController: UITableViewController {
         self.tableView.dataSource = self
         self.tableView.delegate = self
         
-        
         guard let BaseURL = URL(string:/*"https://yts.mx/api/v2/list_movies.json"*/"https://api.itbook.store/1.0/search/mongodb") else {
 //            movieAtrray.append(Movie(title: "ERROR_1", rating: 1.1))
             bookArray.append(Book(title: "ERROR_1", price: "1.1"))

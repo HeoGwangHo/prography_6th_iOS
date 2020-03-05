@@ -33,8 +33,6 @@ struct BookResponse: Codable {
 
 // MARK: - Book
 struct Book: Codable {
-    let title, price : String
-//    let subtitle, isbn13
-//    let image: String
-//    let url: String
+    let title: String?
+    let price: String?
 }
